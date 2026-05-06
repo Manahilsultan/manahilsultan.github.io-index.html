@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manahil Sultan | Marketing Portfolio</title>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap)" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #fff; color: #222; line-height: 1.6; scroll-behavior: smooth; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 10%; position: sticky; top: 0;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(6px);
+      border-bottom: 1px solid #eee; z-index: 100;
+    }
+    header h1 { font-weight: 700; color: #e83e8c; }
+    nav a {
+      margin: 0 1rem; color: #333; text-decoration: none;
+      font-weight: 500; transition: 0.3s;
+    }
+    nav a:hover { color: #e83e8c; }
+
+    section { padding: 5rem 10%; }
+    h2 {
+      color: #e83e8c;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #e83e8c;
+      border-radius: 2px;
+    }
+
+    .hero { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+    .hero img { width: 300px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .hero-text { flex: 1; }
+    .hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #111; }
+    .hero-text p { font-size: 1.1rem; max-width: 600px; }
+
+    .about ul { list-style: none; margin-top: 1rem; }
+    .about li { margin: .5rem 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .grid img {
+      width: 100%; border-radius: 12px;
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .portfolio {
+      background: #fef7fb;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    }
+
+    .portfolio .category {
+      margin-top: 3rem;
+    }
+    .instagram-grid, .wedding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .portfolio img { border-radius: 12px; width: 100%; }
+
+    footer {
+      text-align: center;
+      background: #f8f8f8;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #e83e8c;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* Animation */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; }
+      .hero { flex-direction: column; text-align: center; }
+      .hero img { width: 250px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Manahil Sultan</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#logos">Design</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+    <img src="images/img-0.jpeg" alt="Manahil Sultan portrait">
+    <div class="hero-text">
+      <h1>Creative Marketer & Storyteller</h1>
+      <p>Hi, I'm <strong>Manahil Sultan</strong> — a marketing and community engagement enthusiast who crafts digital experiences that connect, inspire, and convert. With a passion for storytelling, brand strategy, and design, I help brands and communities grow authentically.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>I love the intersection of storytelling, branding, and creativity. Whether leading marketing campaigns, designing visuals, or managing social strategy, I bring empathy and purpose to every project.</p>
+    <ul>
+      <li>🎥 I run a hidden Instagram page blending videography, poetry, and photography.</li>
+      <li>🎨 Designed wedding cards and original artwork celebrating cultural expression.</li>
+      <li>💡 Created brand logos and visuals for startups and student organizations.</li>
+      <li>📈 Skilled in digital marketing, social strategy, and event promotion.</li>
+    </ul>
+  </section>
+
+  <section id="logos" class="fade-in">
+    <h2>Logo & Design Work</h2>
+    <div class="grid">
+      <img src="images/img-1.jpeg">
+      <img src="images/img-2.jpeg">
+      <img src="images/img-3.jpeg">
+      <img src="images/img-4.jpeg">
+      <img src="images/img-5.jpeg">
+    </div>
+  </section>
+
+  <!-- Portfolio section with animated grids -->
+  <section id="portfolio" class="portfolio fade-in">
+    <h2>Portfolio Highlights</h2>
+
+    <div class="category">
+      <h3 style="color:#e83e8c;">📸 Instagram Projects</h3>
+      <p>Campaigns and social content crafted to connect communities and elevate brand voice.</p>
+      <div class="instagram-grid">
+        <img src="images/img-12.jpeg" alt="Example post 1">
+        <img src="images/img-13.jpeg" alt="Example post 2">
+        <img src="images/img-14.jpeg" alt="Example post 3">
+      </div>
+    </div>
+
+    <div class="category">
+      <h3 style="color:#e83e8c; margin-top:3rem;">💌 Wedding Card Designs</h3>
+      <p>Customized, heartfelt designs infusing personality, tradition, and celebration through visuals.</p>
+      <div class="wedding-grid">
+        <img src="images/img-15.jpeg" alt="Wedding Invite 1">
+        <img src="images/img-16.jpeg" alt="Wedding Invite 2">
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="fade-in">
+    <h2>My Process</h2>
+    <div class="grid">
+      <div><strong>Step 1:</strong> Define objectives & audience</div>
+      <div><strong>Step 2:</strong> Research & strategy</div>
+      <div><strong>Step 3:</strong> Creative development</div>
+      <div><strong>Step 4:</strong> Launch & measure results</div>
+      <div><strong>Step 5:</strong> Continuous improvement</div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>✨ Let's connect and create impactful stories together.</p>
+    <a target="_blank" href="[linkedin.com](https://www.linkedin.com/in/manahilsultaan)">www.linkedin.com/in/manahilsultaan</a>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+</html>
