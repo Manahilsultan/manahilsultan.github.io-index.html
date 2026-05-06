@@ -6,152 +6,191 @@
   <title>Manahil Sultan | Marketing Portfolio</title>
   <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap)" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #fff; color: #222; line-height: 1.6; scroll-behavior: smooth; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins',sans-serif; background:#fff; color:#222; line-height:1.6; scroll-behavior:smooth; }
 
     header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.5rem 10%; position: sticky; top: 0;
-      background: rgba(255,255,255,0.95); backdrop-filter: blur(6px);
-      border-bottom: 1px solid #eee; z-index: 100;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:1.5rem 10%; position:sticky; top:0; z-index:100;
+      background:rgba(255,255,255,0.95); backdrop-filter:blur(6px);
+      border-bottom:1px solid #eee;
     }
-    header h1 { font-weight: 700; color: #3c78d8; } /* soft blue */
+    header h1 { font-weight:700; color:#3c78d8; }
     nav a {
-      margin: 0 1rem; color: #333; text-decoration: none;
-      font-weight: 500; transition: 0.3s;
+      margin:0 1rem; color:#333; text-decoration:none; font-weight:500; transition:0.3s;
     }
-    nav a:hover { color: #3c78d8; }
+    nav a:hover { color:#3c78d8; }
 
-    section { padding: 5rem 10%; }
+    section { padding:5rem 10%; }
+
     h2 {
-      color: #3c78d8;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
+      color:#3c78d8;
+      font-size:2rem;
+      margin-bottom:1.5rem;
+      position:relative;
+      display:inline-block;
     }
     h2::after {
-      content: "";
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: #3c78d8;
-      border-radius: 2px;
+      content:""; position:absolute; bottom:-8px; left:0;
+      width:60px; height:3px; background:#3c78d8; border-radius:2px;
     }
 
-    .hero { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
-    .hero img { width: 300px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    .hero-text { flex: 1; }
-    .hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #111; }
-    .hero-text p { font-size: 1.1rem; max-width: 600px; }
+    .hero { display:flex; align-items:center; gap:3rem; flex-wrap:wrap; }
+    .hero img { width:300px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+    .hero-text { flex:1; }
+    .hero-text h1 { font-size:2.5rem; margin-bottom:1rem; color:#111; }
+    .hero-text p { font-size:1.1rem; max-width:600px; }
 
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:2rem;
+      margin-top:2rem;
     }
     .grid img {
-      width: 100%; border-radius: 12px;
-      transition: transform .4s ease, box-shadow .4s ease;
+      width:100%; border-radius:12px;
+      transition:transform .4s ease, box-shadow .4s ease;
     }
     .grid img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transform:scale(1.05);
+      box-shadow:0 10px 20px rgba(0,0,0,.1);
     }
 
-    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-    .visible { opacity: 1; transform: translateY(0); }
+    .portfolio { background:#f6f9ff; border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.05); }
+    .portfolio .category { margin-top:3rem; }
+    .instagram-grid, .wedding-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; margin-top:1.5rem; }
 
-    footer {
-      text-align: center;
-      background: #f1f5fb;
-      padding: 2rem;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #3c78d8;
-      font-weight: 600;
-      text-decoration: none;
-    }
+    footer { text-align:center; background:#f1f5fb; padding:2rem; margin-top:4rem; }
+    footer a { color:#3c78d8; font-weight:600; text-decoration:none; }
 
-    @media (max-width: 768px) {
-      header { flex-direction: column; text-align: center; }
-      .hero { flex-direction: column; }
-      .hero img { width: 250px; }
+    .fade-in{opacity:0; transform:translateY(30px); transition:all .8s ease-out;}
+    .visible{opacity:1; transform:translateY(0);}
+
+    @media(max-width:768px){
+      header{flex-direction:column; text-align:center;}
+      .hero{flex-direction:column;}
+      .hero img{width:250px;}
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Manahil Sultan</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#coop">UofT Co-op</a>
-      <a href="#favourite">Favourite Works</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>Manahil Sultan</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#logos">Design</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#coop">UofT Co-op</a>
+    <a href="#favourite">Favourite Works</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero fade-in">
-    <img src="images/img-0.jpeg" alt="Manahil Sultan portrait">
-    <div class="hero-text">
-      <h1>Creative Marketer & Community Storyteller</h1>
-      <p>Hi, I'm <strong>Manahil Sultan</strong> — a marketing and community engagement enthusiast who crafts digital experiences that inspire and connect. My work combines creative design, social strategy, and storytelling to deliver campaigns that leave an impact.</p>
+<section class="hero fade-in">
+  <img src="images/img-0.jpeg" alt="Manahil Sultan portrait">
+  <div class="hero-text">
+    <h1>Creative Marketer & Community Storyteller</h1>
+    <p>Hi, I'm <strong>Manahil Sultan</strong> — a marketing and community engagement enthusiast passionate about creating impactful digital experiences. My portfolio highlights branding, digital campaigns, and design projects that connect, inspire, and drive results.</p>
+  </div>
+</section>
+
+<section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p>I blend creative storytelling with strategy to build campaigns that make people feel and act. From leading marketing initiatives to designing visual identities, I thrive at the intersection of creativity and communication.</p>
+  <ul style="margin-top:1rem;">
+    <li>🎥 I run a visual storytelling page combining videography, poetry, and photography.</li>
+    <li>💡 Designed logos and wedding cards with a personalized artistic touch.</li>
+    <li>📈 Skilled in digital marketing, event promotion, and youth engagement.</li>
+    <li>🌟 45+ completed marketing & design projects.</li>
+  </ul>
+</section>
+
+<section id="logos" class="fade-in">
+  <h2>Logo & Design Work</h2>
+  <div class="grid">
+    <img src="images/img-1.jpeg">
+    <img src="images/img-2.jpeg">
+    <img src="images/img-3.jpeg">
+    <img src="images/img-4.jpeg">
+    <img src="images/img-5.jpeg">
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio fade-in">
+  <h2>Portfolio Highlights</h2>
+  <div class="category">
+    <h3 style="color:#3c78d8;">📸 Instagram Projects</h3>
+    <p>Social content that connects communities and tells compelling stories through visuals and messaging.</p>
+    <div class="instagram-grid">
+      <img src="images/img-12.jpeg" alt="Pebbles of Hope">
+      <img src="images/img-13.jpeg" alt="Strive Conference">
+      <img src="images/img-14.jpeg" alt="BestPest social work">
     </div>
-  </section>
+  </div>
 
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>Through leadership roles at the <strong>Strive Conference</strong>, <strong>Best Buddies</strong>, and <strong>UofT Scarborough</strong>, I’ve developed skills in marketing strategy, outreach, and design. I love blending storytelling, visuals, and thoughtful campaigns to build creative experiences.</p>
-    <ul style="margin-top:1rem;">
-      <li>🎥 I run a visual storytelling page combining videography, poetry, and photography.</li>
-      <li>🎨 Designed wedding cards and creative branding for personal and professional projects.</li>
-      <li>💼 Experienced in social media management and promotional campaigns for UofT and other organizations.</li>
-    </ul>
-  </section>
-
-  <section id="coop" class="fade-in">
-    <h2>Arts & Science Co-op — University of Toronto Scarborough</h2>
-    <p>As part of my marketing work with UofT’s <strong>Arts & Science Co-op Department</strong>, I helped promote student engagement and event participation through digital campaigns and social media visuals.</p>
-    <div class="grid">
-      <img src="images/img-6.jpeg" alt="UofT Co-op poster 1">
-      <img src="images/img-7.jpeg" alt="UofT Co-op poster 2">
-      <img src="images/img-8.jpeg" alt="UofT Co-op poster 3">
+  <div class="category">
+    <h3 style="color:#3c78d8; margin-top:3rem;">💌 Wedding Card Designs</h3>
+    <p>Personalized and festive invitations crafted with culture, color, and joy.</p>
+    <div class="wedding-grid">
+      <img src="images/img-15.jpeg" alt="Wedding card 1">
+      <img src="images/img-16.jpeg" alt="Wedding card 2">
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="favourite" class="fade-in">
-    <h2>My Favourite Works</h2>
-    <p>My creative work reflects inclusivity and appreciation for culture and emotion — blending design, storytelling, and imagination to connect people through shared experiences.</p>
-    <div class="grid">
-      <img src="images/img-17.jpeg" alt="Collage art piece">
-      <img src="images/img-18.jpeg" alt="BestPest Diwali poster">
-      <img src="images/img-19.jpeg" alt="Eid campaign poster">
-    </div>
-  </section>
+<section id="coop" class="fade-in">
+  <h2>Arts & Science Co-op — University of Toronto Scarborough</h2>
+  <p>I designed marketing materials for the <strong>UofT Arts & Science Co-op Department</strong> promoting events and celebrating student success. The designs focused on youthful engagement and sustainability of brand tone.</p>
+  <div class="grid">
+    <img src="images/img-6.jpeg" alt="UTSC Co-op Launch Poster">
+    <img src="images/img-7.jpeg" alt="UTSC Co-op Countdown Graphic">
+    <img src="images/img-8.jpeg" alt="UTSC Co-op Graduation Campaign">
+  </div>
+</section>
 
-  <footer id="contact">
-    <p>Let's collaborate to create meaningful stories and impactful campaigns 🌍</p>
-    <a href="[linkedin.com](https://www.linkedin.com/in/manahilsultan/)" target="_blank">Connect on LinkedIn</a>
-  </footer>
+<section id="favourite" class="fade-in">
+  <h2>My Favourite Works</h2>
+  <p>These projects represent my creative heart — designs that celebrate culture, art, and inclusivity through vibrant storytelling.</p>
+  <div class="grid">
+    <img src="images/img-17.jpeg" alt="Art collage NFAK">
+    <img src="images/img-18.jpeg" alt="BestPest Diwali poster">
+    <img src="images/img-19.jpeg" alt="BestPest Eid poster">
+  </div>
+</section>
 
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
-  </script>
+<section id="process" class="fade-in">
+  <h2>My Process</h2>
+  <div class="grid">
+    <div><strong>Step 1:</strong> Identify objectives</div>
+    <div><strong>Step 2:</strong> Research & preparation</div>
+    <div><strong>Step 3:</strong> Develop strategies</div>
+    <div><strong>Step 4:</strong> Plan of action</div>
+    <div><strong>Step 5:</strong> Measure progress</div>
+    <div><strong>Step 6:</strong> Continuous improvement</div>
+    <div><strong>Step 7:</strong> Analyze outcomes</div>
+    <div><strong>Step 8:</strong> Focus on the future</div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Let's collaborate to create meaningful stories and impactful campaigns 🌍</p>
+  <a href="[linkedin.com](https://www.linkedin.com/in/manahilsultan/)" target="_blank">Connect on LinkedIn</a>
+</footer>
+
+<script>
+  const faders=document.querySelectorAll('.fade-in');
+  const appearOptions={threshold:0.2,rootMargin:"0px 0px -50px 0px"};
+  const appearOnScroll=new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  },appearOptions);
+  faders.forEach(f=>appearOnScroll.observe(f));
+</script>
 
 </body>
 </html>
